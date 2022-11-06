@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./styles.css"
 
 const Contador = () => {
 
@@ -22,14 +23,32 @@ useEffect(() => {
 console.log("texto por cada actualizacion y primer montaje")
 },[button]);
 
+/* const itemCant = () => {
+    let [buttonAddDel, setButtonAdd] = useState(0); */
+    
+
+
+
+
   return (
     <div><button onClick={counter}>Haceme click</button>
     <p>Click numero {button}</p>
     <p>Ultimo click a las {date}</p>
+    <div className='buttonCont'>
+        <button className='buttonDel' onClick={0}>
+            -
+        </button>
+        <p className='para'>
+        0
+        </p>
+        <button className='buttonAdd'>
+            +
+        </button>
+    </div>
     
     </div>
     
-  )
-  }
+  )}
+  
 
 export default Contador
